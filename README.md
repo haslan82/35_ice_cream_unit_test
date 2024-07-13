@@ -41,7 +41,7 @@
 
 # FireEvent
 
-- rtl içerisndde gelen olay tetikleme methodu
+- rtl içerisnde gelen olay tetikleme methodu
 - gerçek kullanıcıdan uzak tepkiler verdiği için yerini userEvent'e bıraktı
 - tetiklenen olaylar gerçek bir insanın tepkisinden çok daha hızlı bir şekilde aniden gerçekleştiği için testlerde tutarsızlıklara ve beklenmedik sonuçlara yol açabiliyor
 
