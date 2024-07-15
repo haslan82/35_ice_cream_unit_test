@@ -54,3 +54,13 @@
 - tetiklediğimiz olaylar firevent gibi doğrudan tetiklenmesi yerine gerçek bir kullanıyı simüle ederek belirlie bir gecikmenin ardından tetiklenir.
 - kullanılması için kütüphanenin projeye kurluması gerekir
 - async çalıştığı için async await ile kullanılır
+
+
+
+## Canlı Proje
+
+https://34-x-clone-twitter.vercel.app/
+
+
+
+##  Designed by <a href="https://www.linkedin.com/in/h%C3%BCseyin-aslan-128519203/" target="_blank">Hüseyin ASLAN</a> 
