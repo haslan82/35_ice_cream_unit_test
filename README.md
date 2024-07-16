@@ -13,9 +13,10 @@
 
 # HTML Element Rolleri
 
-- Her html elementini kendini temsil eden bir rolü vardır bu roller bzaen etiket ismi ile aynı (button 'un rolü button) bazen farklı (h1'in rolü heading) olabilir
+- Her html elementini kendini temsil eden bir rolü vardır bu roller bazen etiket ismi ile aynı (button 'un rolü button) bazen farklı (h1'in rolü heading) olabilir
 
 - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
+
 
 # Matchers - Kontrolcüler
 
