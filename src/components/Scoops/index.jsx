@@ -51,6 +51,7 @@ if(found.amount > 1) {
 // varsa miktarını arttır
 const temp = basket.map((i) => (i.id === found.id ? updated : i));
 
+
 // state i güncelle 
 setBasket(temp);
 }else {
