@@ -1,6 +1,6 @@
-import React from "react";
 
-const Card = ({ item }) => {
+
+const Card = ({ item, addToBasket }) => {
   //! console.log(item)
   return (
     <div
@@ -11,9 +11,11 @@ const Card = ({ item }) => {
       <img src={item.imagePath} alt="Çeşit Resim" height={100} />
       <span>{item.name} </span>
       <div className="d-flex align-items-center gap-2 mt-4">
-        <button className="btn btn-sm btn-outline-danger">Sıfırla</button>
+        <button className="btn btn-sm btn-outline-danger">Azalt</button>
         <span className="fs-2">0</span>
-        <button className="btn btn-sm btn-outline-success">Ekle</button>
+        <button 
+        onClick={() => addToBasket(item)}
+        className="btn btn-sm btn-outline-success">Ekle</button>
       </div>
     </div>
   );
