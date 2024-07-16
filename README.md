@@ -20,7 +20,7 @@
 
 # Matchers - Kontrolcüler
 
-- expect komutu ile birlikte kullanılan ve bir elementin üzerindeki beklentimizi kontrol eden methodlar. (rengi kırmızıdır | input tiklenmiştir | buton aktiftir | yazı içeri şudur | fonkiyon çağrılmıştır | diznin uzunluğu 5 tir )
+- expect komutu ile birlikte kullanılan ve bir elementin üzerindeki beklentimizi kontrol eden methodlar. (rengi kırmızıdır | input tiklenmiştir | buton aktiftir | yazı içeri şudur | fonkiyon çağrılmıştır | dizinin uzunluğu 5 tir )
 - element kontrolleri
 - https://github.com/testing-library/jest-dom
 - diğer kontroller
@@ -56,8 +56,15 @@
 - kullanılması için kütüphanenin projeye kurluması gerekir
 - async çalıştığı için async await ile kullanılır
 
+### Package.json 
+Package.json içerisinde scripts kısmına 
 
+"server": "json-server --watch db.json --port 4000" eklersek 
 
+Chrome json viewer eklentisini kurarsak json verisi daha güzel görünür
+
+npm run server yazarak server ı ayağa kaldırırız. 
+Yoksa npm run --watch db.json --port 4000" diye uzuncaa yazmak zorunda kalırız.
 ## Canlı Proje
 
 https://34-x-clone-twitter.vercel.app/
