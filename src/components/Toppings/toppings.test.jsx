@@ -32,3 +32,7 @@ test("sosları ekleme ve çıkarma işleminin toplam fiyata etkisi ", async () =
   // 13) toplam ücret 0 mü kontrol et
   expect(total.textContent).toBe("0");
 });
+
+
+
+

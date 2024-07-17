@@ -22,7 +22,7 @@ test("Miktar, başlık ve fotoğraf gelen propa göre ekrana basılır", ()=> {
     />
   );
 // miktar spanını çağır
-screen.getByTestId("amount");
+const amount =screen.getByTestId("amount");
 
 // span içereği 3 mi kontrol et
 expect(amount.textContent).toBe("3");
@@ -86,3 +86,24 @@ expect(removeMockFn).toHaveBeenCalledWith(item.id);
 
 
 // todo azalt butonunu aktiflik testleri
+
+describe("Azalt butonu aktiflik testleri", ()=> {
+
+it("Miktar 1 den fazla ise buton aktiftir", ()=> {
+  render(<Card item={item} amount={3}/>)
+
+  const button = screen.getByRole("button", {name: "Azalt"});
+
+  expect(button).toBeEnabled();
+});
+
+it("miktar 0 ise buton inaktiftir", ()=> {
+  render(<Card item={item} amount={0}/>)
+
+  const button = screen.getByRole("button", { name: "Azalt" });
+
+  expect(button).toBeDisabled();
+});
+
+
+});
