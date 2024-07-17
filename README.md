@@ -21,8 +21,12 @@
 # Matchers - Kontrolcüler
 
 - expect komutu ile birlikte kullanılan ve bir elementin üzerindeki beklentimizi kontrol eden methodlar. (rengi kırmızıdır | input tiklenmiştir | buton aktiftir | yazı içeri şudur | fonkiyon çağrılmıştır | dizinin uzunluğu 5 tir )
+
+
 - element kontrolleri
 - https://github.com/testing-library/jest-dom
+
+
 - diğer kontroller
 - https://jestjs.io/docs/using-matchers
 
