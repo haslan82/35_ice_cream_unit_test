@@ -16,7 +16,7 @@ const Toppings = () => {
       ? setBasket([...basket, item])
       : setBasket(basket.filter((i) => i.name !== item.name));
   };
-console.log(basket)
+//! console.log(basket)
   return (
     <div>
       <h1>Sos Çeşitleri</h1>
