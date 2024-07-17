@@ -56,8 +56,8 @@
 # UserEvent
 
 - firevent'in modern / gelişmiş versiyonu
-- tetiklediğimiz olaylar firevent gibi doğrudan tetiklenmesi yerine gerçek bir kullanıyı simüle ederek belirlie bir gecikmenin ardından tetiklenir.
-- kullanılması için kütüphanenin projeye kurluması gerekir
+- tetiklediğimiz olaylar firevent gibi doğrudan tetiklenmesi yerine gerçek bir kullanmayı simüle ederek belirlie bir gecikmenin ardından tetiklenir.
+- kullanılması için kütüphanenin projeye kurulması gerekir
 - async çalıştığı için async await ile kullanılır
 
 ### Package.json 

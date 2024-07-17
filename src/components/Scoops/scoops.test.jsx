@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import Scoops from ".";
-
+import userEvent from "@testing-library/user-event";
 
 
 /* 
@@ -25,6 +25,9 @@ import Scoops from ".";
 
 
 it("Api den alınan veriler için ekrana kartlar basılır", async ()=> {
+
+  
+    // test edilecek bileşen render edilir
     render(<Scoops />);
 
 // ekrana basılan kartları al
@@ -35,7 +38,16 @@ expect(images.length).toBeGreaterThanOrEqual(1);
 
 });
 
+
+
+
+
+
 it("Çeşitlerin ekleme ve azaltma özelliklerinin toplam fiyata etkisi", async ()=> {
+
+// userEvent in kurlumunu yap
+const user = userEvent.setup();
+
 
 // test edilecek bileşen render edilir
 render(<Scoops />)
@@ -50,38 +62,47 @@ render(<Scoops />)
 const total = screen.getByTestId("total");
 
 // toplam fiyat 0 mı? Kontrol et 
+//expect(total).toHaveTextContent(/^0$/);
 expect(total.textContent).toBe("0");
 
+
 //Chocolate ekle  butonuna tıkla
+await user.click(addBtns[2])
 
 
 // Toplam fiyat 20 mi kontrol et
+expect(total.textContent).toBe("20");
 
 
 // Vanilla nın ekle butonuna 2 kez tıkla
-
-
+await user.dblClick(addBtns[1])
 
  // toplam fiyat 60 mi kontrol et
+ expect(total.textContent).toBe("60");
 
 
 // vanillanın azalt butonuna  tıkla
+await user.click(delBtns[1]);
 
 
  // toplam fiyat 40 mı kontrol et
+ expect(total.textContent).toBe("40");
 
 
  // vanillanın azalt butonuna  tıkla
+await user.click(delBtns[1]);
 
 
  // toplam fiyat 20 mı kontrol et
+ expect(total.textContent).toBe("20");
 
 
  // chocalte'ın azalt butonuna tıkla
+ await user.click(delBtns[2]);
 
 
    // toplam fiyat 0 mı kontrol et
-
+   expect(total.textContent).toBe("0");
 
 
 });

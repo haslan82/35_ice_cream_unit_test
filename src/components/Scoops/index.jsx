@@ -1,17 +1,13 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react'
-import Card from '../Card';
+import axios from "axios";
+import { useEffect, useState } from "react";
+import Card from "../Card";
 
 const Scoops = () => {
-const [basket, setBasket] = useState([]);
- const [data, setData] = useState([]);
-
- useEffect(() => {
-
-    axios
-    .get("http://localhost:4000/scoops")
-    .then((res) => setData(res.data));
-  }, []);
+  const [data, setData] = useState([]);
+  const [basket, setBasket] = useState([]);
+useEffect(() => {
+  axios.get("http://localhost:4000/scoops").then((res) => setData(res.data));
+}, []);
 
 // sepete kele
 const addToBasket = (item) => {
@@ -22,7 +18,7 @@ const addToBasket = (item) => {
 if(found) {
 
 // güncel nesneyi oluştur
-  const updated = {...found, amount: found.amount + 1}
+const updated = { ...found, amount: found.amount + 1 };
 
 // diziyi güncelle
 const temp = basket.map((i) => (i.id === found.id ? updated : i));
@@ -55,10 +51,11 @@ const temp = basket.map((i) => (i.id === found.id ? updated : i));
 // state i güncelle 
 setBasket(temp);
 }else {
-// yoksa sepetten kaldır
-setBasket(basket.filter((i)=> i.id !== id));
 
+// yoksa septten kaldır
+setBasket(basket.filter((i) => i.id !== id));
 }
+
 }
 //! console.log(basket)
 
