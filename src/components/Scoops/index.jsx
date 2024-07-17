@@ -24,7 +24,7 @@ if(found) {
 // güncel nesneyi oluştur
   const updated = {...found, amount: found.amount + 1}
 
-// varsa miktarını arttır
+// diziyi güncelle
 const temp = basket.map((i) => (i.id === found.id ? updated : i));
 
 // state i güncelle 
@@ -36,9 +36,9 @@ setBasket([...basket, { ...item, amount: 1 }]);
 }
  
 }
-console.log(basket);
+//! console.log(basket);
 // sepetten çıkar
-const  clearFromBasket = (id) => {
+const  removeFromBasket = (id) => {
 
 // elemanı sepette bul
 const found = basket.find((i) => i.id === id);
@@ -48,7 +48,7 @@ if(found.amount > 1) {
 // güncel nesneyi oluştur
   const updated = {...found, amount: found.amount -1}
 
-// varsa miktarını arttır
+//  diziyi güncelle
 const temp = basket.map((i) => (i.id === found.id ? updated : i));
 
 
@@ -60,20 +60,45 @@ setBasket(basket.filter((i)=> i.id !== id));
 
 }
 }
+//! console.log(basket)
 
- return (
-    <div >
-      <h1>Dondurma Çeşitleri</h1>
-      <p>
-        Tanesi <span className='text-success'>20</span>₺
-      </p>
-      <h3>Çeşitler Ücreti <span className='text-success'>0</span>₺</h3>
-      <div className=' p-3 row gap-5 mt-4 justify-content-between'>
-        {data.map((i)=> (
-          <Card addToBasket = {addToBasket} item= {i} key={i.id} />
-        ) )} </div>
+// toplam fiyatı hesapla
+const total = basket.reduce((total, i)=> total + i.amount * 20, 0 )
+
+return (
+  <div>
+    <h1>Dondurma Çeşitleri</h1>
+
+    <p>
+      Tanesi <span className="text-success">20</span>₺
+    </p>
+
+    <h3>
+      Çeşitler Ücreti
+      <span data-testid="total" className="text-success">
+        {total}
+      </span>
+      ₺
+    </h3>
+
+    <div className="p-3 row gap-5 mt-4 justify-content-between">
+      {data.map((i) => {
+        // ekrana basılacak elemanı sepette bul
+        const found = basket.find((item) => item.id === i.id);
+
+        return (
+          <Card
+            amount={found?.amount || 0}
+            addToBasket={addToBasket}
+            removeFromBasket={removeFromBasket}
+            item={i}
+            key={i.id}
+          />
+        );
+      })}
     </div>
-  )
+  </div>
+);
 }
 
 export default Scoops;

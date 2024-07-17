@@ -1,6 +1,6 @@
 
 
-const Card = ({ item, addToBasket }) => {
+const Card = ({ item, addToBasket, removeFromBasket, amount }) => {
   //! console.log(item)
   return (
     <div
@@ -11,8 +11,16 @@ const Card = ({ item, addToBasket }) => {
       <img src={item.imagePath} alt="Çeşit Resim" height={100} />
       <span>{item.name} </span>
       <div className="d-flex align-items-center gap-2 mt-4">
-        <button className="btn btn-sm btn-outline-danger">Azalt</button>
-        <span className="fs-2">0</span>
+      <button
+          disabled={amount === 0}
+          onClick={() => removeFromBasket(item.id)}
+          className="btn btn-sm btn-outline-danger"
+        >
+          Azalt
+        </button>
+        <span data-testid="amount" className="fs-2">
+          {amount}
+        </span>
         <button 
         onClick={() => addToBasket(item)}
         className="btn btn-sm btn-outline-success">Ekle</button>
