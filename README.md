@@ -1,14 +1,17 @@
 ## Ice Cream Project
+
 This project offers users the opportunity to choose ice cream flavors and toppings, add/remove them, manage their orders and control the total price of their orders.
 This project, developed with React, was tested using Unit Test.
 
 
 
 ## Libraries
+
 - json-server
 - bootstrap
 - axios@^0.27.2
 - @testing-library/user-event@14.0
+
 
 
 ## Gif
@@ -16,7 +19,13 @@ This project, developed with React, was tested using Unit Test.
 ![](/public/ice%20gif.gif)
 
 
+
+
 ##  Designed by <a href="https://www.linkedin.com/in/h%C3%BCseyin-aslan-128519203/" target="_blank">Hüseyin ASLAN</a> 
+
+
+
+
 
 
 
