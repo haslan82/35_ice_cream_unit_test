@@ -1,24 +1,39 @@
-# Kütüphaneler
+## Ice Cream Project
+This project offers users the opportunity to choose ice cream flavors and toppings, add/remove them, manage their orders and control the total price of their orders.
+This project, developed with React, was tested using Unit Test.
 
+
+
+## Libraries
 - json-server
 - bootstrap
 - axios@^0.27.2
 - @testing-library/user-event@14.0
 
-# Selectors - Seçiciler
+
+## Gif
+
+![](/public/ice%20gif.gif)
+
+
+##  Designed by <a href="https://www.linkedin.com/in/h%C3%BCseyin-aslan-128519203/" target="_blank">Hüseyin ASLAN</a> 
+
+
+
+# Selectors
 
 - Test içerisnde jsx elementlerini çağırmay yarayan methodlar
 - screen nesnesi aracılığı ile kullanılır
 - https://testing-library.com/docs/queries/byrole
 
-# HTML Element Rolleri
+# HTML Element Roles
 
 - Her html elementini kendini temsil eden bir rolü vardır bu roller bazen etiket ismi ile aynı (button 'un rolü button) bazen farklı (h1'in rolü heading) olabilir
 
 - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
 
 
-# Matchers - Kontrolcüler
+# Matchers - (Kontrolcüler)
 
 - expect komutu ile birlikte kullanılan ve bir elementin üzerindeki beklentimizi kontrol eden methodlar. (rengi kırmızıdır | input tiklenmiştir | buton aktiftir | yazı içeri şudur | fonkiyon çağrılmıştır | dizinin uzunluğu 5 tir )
 
@@ -75,4 +90,3 @@ https://34-x-clone-twitter.vercel.app/
 
 
 
-##  Designed by <a href="https://www.linkedin.com/in/h%C3%BCseyin-aslan-128519203/" target="_blank">Hüseyin ASLAN</a> 

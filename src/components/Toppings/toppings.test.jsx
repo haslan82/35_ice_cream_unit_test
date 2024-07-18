@@ -3,10 +3,10 @@ import userEvent from "@testing-library/user-event";
 import Toppings from ".";
 
 test("sosları ekleme ve çıkarma işleminin toplam fiyata etkisi ", async () => {
-  const user = userEvent.setuwp();
+  const user = userEvent.setup();
 
   // 1) bileşeni renderla
-  render(<Toppings />);
+  render(<Toppings/>);
   // 2) Bütün sos checkedbox larını al
   const toppings = await screen.findAllByRole("checkbox");
   // 3) toplam spanını al

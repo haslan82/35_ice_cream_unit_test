@@ -24,7 +24,7 @@ const Toppings = () => {
         Tanesi <span className="text-success">3</span>₺
       </p>
       <h3>
-        Soslar Ücreti <span data-testid="total" className="text-success">{basket.length * 3} </span>
+        Soslar Ücreti <span data-testid="total" className="text-success">{basket.length*3}</span>
       </h3>
       <div className="row mt-4 gap-3">
         {data.map((i) => (
